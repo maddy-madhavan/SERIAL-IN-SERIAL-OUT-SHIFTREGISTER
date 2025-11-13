@@ -42,28 +42,32 @@ RegisterNumber: 24901129
 
 ```
 ```
-module exp10(clk, sin, q);
-    input clk;
-    input sin;
-    output [3:0] q;
-    reg [3:0] q;
-
-    always @(posedge clk) begin
-        q[0] <= sin;
-        q[1] <= q[0];
-        q[2] <= q[1];
-        q[3] <= q[2];  
-    end
+VHDL
+module EXP10(clk, sin, q);
+input clk;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+always @(posedge clk)
+begin
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
 endmodule
 
 ```
 
 **RTL LOGIC FOR SISO Shift Register**
-![image](https://github.com/user-attachments/assets/74754641-8f50-47bb-bbff-1912a82aff08)
+
+<img width="641" height="376" alt="image" src="https://github.com/user-attachments/assets/4e767880-a0f3-4ac5-903c-90e2db7c7fda" />
+
 
 
 **TIMING DIGRAMS FOR SISO Shift Register**
-![image](https://github.com/user-attachments/assets/77777f25-4b4f-4668-87f2-907191c2516a)
+
+<img width="1617" height="918" alt="image" src="https://github.com/user-attachments/assets/48220072-89b8-47b2-b419-12aacae530aa" />
 
 
 **RESULTS**
